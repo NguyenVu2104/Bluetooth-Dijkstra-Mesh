@@ -1,0 +1,36 @@
+using sysbus
+
+$bin_a?=@build_a/zephyr/zephyr.elf
+$bin_b?=@build_b/zephyr/zephyr.elf
+$bin_c?=@build_c/zephyr/zephyr.elf
+
+emulation CreateBLEMedium "wireless"
+
+mach create "nodeA"
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl
+connector Connect sysbus.radio wireless
+showAnalyzer uart0
+
+mach create "nodeB"
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl
+connector Connect sysbus.radio wireless
+showAnalyzer uart0
+
+mach create "nodeC"
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl
+connector Connect sysbus.radio wireless
+showAnalyzer uart0
+
+emulation SetGlobalQuantum "0.00001"
+
+macro reset
+"""
+mach set "nodeA"
+sysbus LoadELF $bin_a
+mach set "nodeB"
+sysbus LoadELF $bin_b
+mach set "nodeC"
+sysbus LoadELF $bin_c
+"""
+runMacro $reset
+start

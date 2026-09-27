@@ -1,0 +1,30 @@
+mainmenu "Bluetooth Dijkstra Mesh"
+
+config APP_NODE_ID
+	int "Node ID for this build (0=A, 1=B, 2=C)"
+	default 0
+	help
+	  Identifies this node in the static routing graph.
+
+config APP_FAULT_INJECTION
+	bool "Bật fault injection trên Node B (demo M4)"
+	default n
+	help
+	  Khi bật, node có APP_NODE_ID=1 (Node B) sẽ chủ động "làm rớt" mọi
+	  gói DATA mà nó nhận trực tiếp từ Node A (tức prev_hop_id của gói
+	  bằng 0) — không ACK, không forward. Đây là fault injection ở tầng
+	  application, dùng để mô phỏng hiện tượng mất gói một chiều trên
+	  liên kết A-B, kích hoạt cơ chế tăng cost và Dijkstra reroute.
+	  Cờ này chỉ có tác dụng khi build cho Node B — build cho Node A/C
+	  bật cờ này cũng không làm gì cả vì điều kiện kiểm tra self_id.
+
+source "Kconfig.zephyr"
+
+# ==============================================================================
+# BẢN CHẤT CỦA FILE KCONFIG:
+# 1. Zephyr tự động tìm file có tên chính xác là "Kconfig" (không cần đuôi mở rộng).
+# 2. Khi gõ 'west build', công cụ Kconfiglib sẽ đọc file này TRƯỚC TIÊN.
+# 3. Kconfiglib tự động dịch các lệnh dưới đây thành file mã C ẩn (autoconf.h).
+#    (Ví dụ: nó sinh ra dòng '#define CONFIG_APP_NODE_ID 0' trong autoconf.h)
+# 4. Lợi ích: Cho phép đổi cấu hình từ terminal mà không cần sửa mã C.
+# ==============================================================================

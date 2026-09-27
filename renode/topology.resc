@@ -1,0 +1,16 @@
+using sysbus
+
+mach create "node"
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl
+
+$bin?=@build/zephyr/zephyr.elf
+
+showAnalyzer uart0
+
+macro reset
+"""
+    sysbus LoadELF $bin
+"""
+
+runMacro $reset
+start
