@@ -1,0 +1,131 @@
+*** Booting Zephyr OS build v3.7.0 ***
+Node ID = 1
+[TX] Gui (lan 1) toi Node 0, seq=0
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] Het gio cho ACK, thu gui lai (lan 2)
+[TX] Gui (lan 2) toi Node 0, seq=0
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] MAT GOI: lien ket Node 1 <-> Node 0, seq=0 - cost moi = 2
+[TX] Ket qua gui toi Node 0 qua next_hop=0, seq=0: MAT GOI
+[RX] FAULT INJECT: co tinh lam rot goi tu Node 0, seq=0
+[RX] FORWARD: src=2 dst=0 qua Node 1 -> next_hop=0
+[TX] Gui (lan 1) toi Node 0, seq=0
+[TX] Gui (lan 1) toi Node 2, seq=1
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] Het gio cho ACK, thu gui lai (lan 2)
+[TX] Gui (lan 2) toi Node 2, seq=1
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] MAT GOI: lien ket Node 1 <-> Node 2, seq=1 - cost moi = 2
+[TX] Ket qua gui toi Node 2 qua next_hop=2, seq=1: MAT GOI
+[RX] FAULT INJECT: co tinh lam rot goi tu Node 0, seq=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=0
+[TX] Gui (lan 1) toi Node 0, seq=2
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] Het gio cho ACK, thu gui lai (lan 2)
+[TX] Gui (lan 2) toi Node 0, seq=2
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] MAT GOI: lien ket Node 1 <-> Node 0, seq=2 - cost moi = 2
+[TX] Ket qua gui toi Node 0 qua next_hop=0, seq=2: MAT GOI
+[RX] BO QUA (khong phai next-hop): src=0 dst=2 next_hop=2
+[RX] NHAN DICH: tu Node 2, seq=3, noi dung="Hello from C"
+[TX] Gui (lan 1) toi Node 2, seq=3
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] Het gio cho ACK, thu gui lai (lan 2)
+[TX] Gui (lan 2) toi Node 2, seq=3
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] MAT GOI: lien ket Node 1 <-> Node 2, seq=3 - cost moi = 4
+[TX] Ket qua gui toi Node 2 qua next_hop=2, seq=3: MAT GOI
+[RX] FORWARD: src=2 dst=0 qua Node 1 -> next_hop=0
+[TX] Gui (lan 1) toi Node 0, seq=4
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[TX] Gui (lan 1) toi Node 0, seq=4
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[TX] Ket qua gui toi Node 0 qua next_hop=0, seq=4: THANH CONG
+[RX] NHAN DICH: tu Node 0, seq=4, noi dung="Hello from A"
+[TX] Gui (lan 1) toi Node 2, seq=5
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den
+[RX] BAN cho ACK, bo qua 1 goi khac vua den

@@ -1,0 +1,18 @@
+mainmenu "Bluetooth Dijkstra Mesh"
+
+config APP_NODE_ID
+	int "Node ID for this build (0=A, 1=B, 2=C)"
+	default 0
+	help
+	  Identifies this node in the static routing graph.
+
+source "Kconfig.zephyr"
+
+# ==============================================================================
+# BẢN CHẤT CỦA FILE KCONFIG:
+# 1. Zephyr tự động tìm file có tên chính xác là "Kconfig" (không cần đuôi mở rộng).
+# 2. Khi gõ 'west build', công cụ Kconfiglib sẽ đọc file này TRƯỚC TIÊN.
+# 3. Kconfiglib tự động dịch các lệnh dưới đây thành file mã C ẩn (autoconf.h).
+#    (Ví dụ: nó sinh ra dòng '#define CONFIG_APP_NODE_ID 0' trong autoconf.h)
+# 4. Lợi ích: Cho phép đổi cấu hình từ terminal mà không cần sửa mã C.
+# ==============================================================================

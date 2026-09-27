@@ -1,0 +1,110 @@
+*** Booting Zephyr OS build v3.7.0 ***
+Node ID = 0
+[RX] NHAN DICH: tu Node 1, seq=0, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=0
+[RX] NHAN DICH: tu Node 2, seq=0, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[TX] Gui toi Node 2 (next_hop=1), seq=1
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=2
+[RX] NHAN DICH: tu Node 1, seq=2, noi dung="Hello from B"
+[RX] NHAN DICH: tu Node 2, seq=2, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[TX] Gui toi Node 2 (next_hop=1), seq=3
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=4
+[RX] NHAN DICH: tu Node 1, seq=4, noi dung="Hello from B"
+[RX] NHAN DICH: tu Node 2, seq=4, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=5
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=6
+[RX] NHAN DICH: tu Node 1, seq=6, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[RX] NHAN DICH: tu Node 2, seq=6, noi dung="Hello from C"
+[TX] Gui toi Node 2 (next_hop=1), seq=7
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=8
+[RX] NHAN DICH: tu Node 1, seq=8, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=9
+[RX] NHAN DICH: tu Node 2, seq=8, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[TX] Gui toi Node 1 (next_hop=1), seq=10
+[RX] NHAN DICH: tu Node 1, seq=10, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=11
+[RX] NHAN DICH: tu Node 2, seq=10, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=12
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=13
+[RX] NHAN DICH: tu Node 1, seq=12, noi dung="Hello from B"
+[RX] NHAN DICH: tu Node 2, seq=12, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=14
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=15
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[RX] NHAN DICH: tu Node 1, seq=14, noi dung="Hello from B"
+[TX] Gui toi Node 1 (next_hop=1), seq=16
+[RX] NHAN DICH: tu Node 2, seq=14, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=17
+[RX] NHAN DICH: tu Node 1, seq=16, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=18
+[RX] NHAN DICH: tu Node 2, seq=16, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=19
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[RX] NHAN DICH: tu Node 1, seq=18, noi dung="Hello from B"
+[TX] Gui toi Node 1 (next_hop=1), seq=20
+[RX] NHAN DICH: tu Node 2, seq=18, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=21
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=22
+[RX] NHAN DICH: tu Node 1, seq=20, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=23
+[RX] NHAN DICH: tu Node 2, seq=20, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=24
+[RX] NHAN DICH: tu Node 1, seq=22, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=25
+[RX] NHAN DICH: tu Node 2, seq=22, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=26
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[RX] NHAN DICH: tu Node 1, seq=24, noi dung="Hello from B"
+[TX] Gui toi Node 2 (next_hop=1), seq=27
+[RX] NHAN DICH: tu Node 2, seq=24, noi dung="Hello from C"
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=28
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[TX] Gui toi Node 2 (next_hop=1), seq=29
+[RX] NHAN DICH: tu Node 1, seq=26, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
+[TX] Gui toi Node 1 (next_hop=1), seq=30
+[RX] BO QUA (khong phai next-hop): src=1 dst=2 next_hop=2
+[RX] BO QUA (khong phai next-hop): src=2 dst=1 next_hop=1
+[RX] NHAN DICH: tu Node 2, seq=28, noi dung="Hello from C"
+[TX] Gui toi Node 2 (next_hop=1), seq=31
+[RX] NHAN DICH: tu Node 1, seq=28, noi dung="Hello from B"
+[RX] BO QUA (khong phai next-hop): src=2 dst=0 next_hop=1
