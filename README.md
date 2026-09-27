@@ -4,6 +4,20 @@ A simplified BLE mesh network simulation demonstrating **Dijkstra-based hop-by-h
 
 Three virtual nodes (A, B, C) exchange messages over simulated BLE advertising. Each node independently runs Dijkstra's algorithm on a local copy of the network graph to decide the next hop for every packet. When a link degrades (simulated packet loss), the affected node detects it through missing acknowledgments, raises that link's cost, and automatically reroutes future traffic through a cheaper path — a live demonstration of adaptive routing under changing network conditions.
 
+Milestone Breakdown
+
+The project was built incrementally through five milestones (M0–M4), each one a strict prerequisite for the next. Rather than attempting the full system in one pass, every milestone was scoped to isolate a single new capability and required a working, runnable result — a clear Definition of Done — before moving on. This made debugging tractable: when something broke, the search space was limited to whatever had been added in that specific milestone, rather than the entire stack at once.
+
+M0 — Toolchain and simulation bring-up. Before writing any application logic, the goal was simply to get a Zephyr "hello world" image built and booting inside Renode. This validated the entire toolchain (Zephyr SDK, west, board target, Renode integration) independently of any project-specific code, so that later milestones could assume the environment itself was not the source of bugs.
+
+M1 — Single-node threading model. With the environment confirmed working, this milestone introduced the concurrency model on a single simulated node: a TX thread and an RX thread communicating through an internal message queue, with the node's identity (NODE_ID) configured through Kconfig rather than hardcoded. No networking was involved yet — the goal was to prove the threading and configuration approach in isolation before adding radio communication into the mix.
+
+M2 — Real BLE communication between nodes. This milestone replaced the internal message queue with actual over-the-air communication: three nodes exchanging data via BLE advertising and scanning (Broadcaster/Observer roles). The focus here was strictly on getting real inter-node communication working — a simple, temporary payload format was used, deferring the question of a proper packet protocol to the next milestone.
+
+M3 — Real multi-hop routing. With reliable point-to-point communication in place, this milestone introduced the actual mesh behavior: a formal packet format carrying routing metadata, and a real Dijkstra implementation deciding the next hop at every node. Critically, the network topology was deliberately built so that not every pair of nodes has a direct link — forcing at least one multi-hop forward and proving that routing decisions are genuinely being computed, not just a direct broadcast that happens to be received everywhere.
+
+M4 — Reliability and adaptive routing. The final milestone moved the system from a static router to an adaptive one. It added hop-by-hop acknowledgments, timeouts, and bounded retries to detect when a link is failing, translated repeated failures into a rising cost for that link, and let Dijkstra's next calculation naturally route around it. This is the milestone that distinguishes the project from a simple shortest-path demo: it shows the routing decision responding to real-time network conditions rather than only ever running once against a fixed graph.
+
 ## Key Features
 
 - **Custom mesh packet protocol** carried over BLE advertising/scanning (Broadcaster + Observer roles — no BLE connections)
