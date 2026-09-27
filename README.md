@@ -1,6 +1,6 @@
 # Bluetooth Dijkstra Mesh
 
-A simplified BLE mesh network simulation demonstrating **Dijkstra-based hop-by-hop routing** with **reliable transmission** and **adaptive link-cost rerouting**, built on Zephyr RTOS and simulated entirely in Renode — no physical hardware required.
+A simplified BLE mesh network simulation demonstrating **Dijkstra-based hop-by-hop routing** with **reliable transmission** and **adaptive link-cost rerouting**, built on Zephyr RTOS and simulated entirely in Renode
 
 Three virtual nodes (A, B, C) exchange messages over simulated BLE advertising. Each node independently runs Dijkstra's algorithm on a local copy of the network graph to decide the next hop for every packet. When a link degrades (simulated packet loss), the affected node detects it through missing acknowledgments, raises that link's cost, and automatically reroutes future traffic through a cheaper path — a live demonstration of adaptive routing under changing network conditions.
 
