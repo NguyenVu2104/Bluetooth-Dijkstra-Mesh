@@ -69,28 +69,6 @@ Link A-B starts healthy (cost 1)
 
 Cost changes are local to the node that observes them — there is no propagation between nodes' routing tables, matching the fully decentralized, hop-by-hop nature of the design.
 
-## Project Structure
-
-```
-bluetooth-dijkstra-mesh/
-├── app/
-│   ├── CMakeLists.txt
-│   ├── Kconfig                 # per-build NODE_ID and fault-injection flag
-│   ├── prj.conf
-│   └── src/
-│       ├── main.c              # application logic, ACK/retry state machine
-│       ├── packet.h            # shared wire-format definition
-│       ├── routing.h / .c      # Dijkstra + adaptive link costs
-│       └── transport.h / .c    # BLE transport layer
-├── tests/
-│   └── routing_host/           # host-side unit tests for the routing algorithm
-├── renode/
-│   └── topology_*.resc         # Renode scripts, one per milestone
-├── scripts/
-│   └── build_and_run_*.sh      # build all 3 nodes and launch the simulation
-└── logs/                       # per-run UART and build logs, organized by milestone
-```
-
 ## Getting Started
 
 ### Prerequisites
@@ -124,17 +102,6 @@ gcc -DROUTING_HOST_TEST tests/routing_host/test_routing.c app/src/routing.c -o t
 ./test_routing
 ```
 
-## Development Milestones
-
-| Milestone | Scope | Status |
-|---|---|---|
-| M0 | Zephyr hello-world booting under Renode | Done |
-| M1 | Single node, TX/RX threads with an internal message queue | Done |
-| M2 | Three nodes exchanging data over real BLE advertising/scanning | Done |
-| M3 | Formal packet format + real Dijkstra-based multi-hop forwarding | Done |
-| M4 | ACK, retry, adaptive link cost, and live Dijkstra rerouting demo | Done |
-| M5 | Documentation, cleanup, final polish | In progress |
-
 ## Known Limitations
 
 This project intentionally favors a simple, working design over full production-grade robustness, within the scope of a 3-node demonstration:
@@ -144,8 +111,6 @@ This project intentionally favors a simple, working design over full production-
 - **Non-propagating link costs** — a node's view of link quality is local; it is not shared or gossiped with other nodes.
 - **Retry vs. duplicate-detection interaction** — under certain timing conditions, a retried packet can be mistaken for a physical-layer duplicate of the original transmission, which may register as a lost packet even when delivery actually succeeded.
 - **No overflow protection on the receive queue** — under sustained load, incoming packets can be silently dropped if the queue fills up.
-
-These are documented trade-offs for a fresh-graduate portfolio project, not oversights — each has a defined path toward a more robust solution.
 
 ## Tech Stack
 
